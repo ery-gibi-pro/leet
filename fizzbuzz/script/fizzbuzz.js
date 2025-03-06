@@ -1,26 +1,32 @@
 function fizzbuzz()
 {
     let a = 0;
-    while(a < 100)
+    let fb = [];
+    while(a < 101)
     {
         if (a % 5 == 0 && a % 3 == 0)
         {
-            console.log("FizzBuzz");
+            //console.log("FizzBuzz");
+            fb[a] = "FizzBuzz";
         }
         else if(a % 3 == 0)
         {
-            console.log("fizz");
+            //console.log("fizz");
+            fb[a] = "Fizz";
         }
         else if(a % 5 == 0)
         {
-            console.log("buzz");
+            //console.log("buzz");
+            fb[a] = "Buzz";
         }
         else
         {
-            console.log(a)
+            //console.log(a);
+            fb[a] = a;
         }
         a++;
     }
+    return(fb)
 }
 
-fizzbuzz()
+console.log(fizzbuzz())
