@@ -29,4 +29,24 @@ function fizzbuzz()
     return(fb)
 }
 
+function addPara(a)
+{
+    let main = document.querySelector("#main");
+    let p = document.createElement("p");
+    p.textContent = a;
+    main.appendChild(p)
+
+   
+}
+function createFB()
+{
+    let fb = fizzbuzz();
+
+    for(let i = 0;i<101;i++)
+    {
+        addPara(fb[i]);
+    }
+}
+
+createFB();
 console.log(fizzbuzz())
